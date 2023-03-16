@@ -1,0 +1,105 @@
+/*main settings for page*/
+body {
+	background-image: url(img/wallpaper.jpg);
+	margin: auto;
+	text-align: center;
+}
+
+/*game name*/
+h1{
+	color: #11CC00;
+}
+
+/*no scroll*/
+::-webkit-scrollbar { 
+  width: 0;
+}
+
+/*msg game*/
+.msgBox {
+   font-size: 2em;
+   color: #FF0000;
+   background: #FFF;
+   width: 8vw;
+   margin: auto;
+}
+
+/*main styles game*/
+.wrapper{
+	background: #FFFFFF;
+	margin: 1%;
+	padding: 0;
+}
+
+/*style game*/
+#play {
+   position: relative;
+   margin: auto;
+   padding: 7px 0;
+}
+
+#play > div.box {
+   display: flex;
+   flex-wrap: wrap;
+   /*Для выживания*/
+   /*width: 98vmax;*/
+   /*Для судоку*/
+   width: 50vmax;
+   margin: auto;
+   align-items: flex-end;
+   justify-content: center;
+   align-content: flex-start;
+}
+
+#play > div.box > .square {
+   width: 5vw;
+   height: 5vw;
+   border: solid 1px;
+   background: white;
+   transition: 1s;
+}
+
+.square {
+   font: 3vw sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.clickk {
+   box-shadow:inset 0 0 0 0.2em #53EA93;
+}
+
+#play > div.button {
+   font-size: 13px;
+   line-height: 1.3em;
+   text-align: center;
+   background: #FFF;
+   border: solid 1px #000;
+   border-radius: 7px;
+   width: 100px;
+   margin: 7px auto auto auto;
+}
+
+#play > .button:hover {
+   text-shadow: 1px 1px 2px Silver;
+   box-shadow:inset 0 0 0 0.2em #53EA93;
+}
+
+/*style description game*/
+	/*end work*/
+.about_game{
+	height: 120px;
+	width: auto;
+	background: #5AA;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.target_game{
+	display: flex;
+}
+.control{
+	display: flex;
+}
+

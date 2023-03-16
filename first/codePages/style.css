@@ -1,0 +1,252 @@
+*{ /* Обнуление*/
+	margin: 0 auto;
+	padding: 15;
+	bottom: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+body {
+	background: radial-gradient(#FFE4E1, #3e46ec);
+}
+/*style for navigation*/
+.menu{
+	background-color: #FFE4E1;
+	font-size: 20px;
+}
+.menu li{
+	position: relative;
+	list-style: none; /*убираю стиль у пунктов списка*/
+}
+.menu__list{
+	display: flex; /*Первый уровень таблицы становится горизонтальным*/
+}
+.menu__list>li{
+	margin: 7px;
+}
+.menu__list>li:hover .sub_menu__list
+{
+	display: block;
+}
+.menu__link{}
+.sub_menu__list{
+	min-width: 150px;
+	display: none;
+	position: absolute;
+	left: 0px;
+	top: 15px;
+	padding: 10px 0px 0px 0px;
+}
+.sub_menu__list>li{
+	background-color: #FFE4E1;
+}
+.sub-menu__link{
+	display: inline-block;
+	padding: 5px 10px;
+}
+main{
+	text-align: center;
+	margin: 60px;
+}
+/*style for img*/
+.first_Img{
+	min-height: 491px;
+	min-width: 800px;
+	position: relative;
+	left: 25%;
+}
+[data-tooltip]::after {
+	content: attr(data-tooltip);
+	transition: all 0.5s ease-in-out;
+	opacity: 0;
+	background: #0FE6EF;
+	min-width: 100px;
+	position: absolute;
+	display: inline-block;
+	color: #000;
+	padding: 5px;
+	margin: 5px;
+	z-index: 1;
+	border: 4px ridge; #000;
+	box-shadow: 9px -5px #02A1EF;
+}
+[data-tooltip]:hover::after {
+	opacity: 1;
+}
+/*style for text*/
+.ttt{
+	font-family: sans-serif;
+	font-size: 20px;
+	text-indent: 50px;
+	margin: auto;
+	width: 80%;
+	padding: auto;
+}
+.sub-text{
+	background-color: #FFE4E1;
+	border: 2px;
+	border-color: #000;
+}
+footer{
+	width: auto;
+	height: 150px;
+}
+.sub-h{
+	font-family: serif;
+}
+/*for gallery*/
+.cssSlider {
+	display: block;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+.cssSlider .slides {
+	overflow: hidden;
+	overflow: hidden;
+	width: 100%;
+	height: 70vmin;
+	margin: 10px;
+	padding: 0;
+	list-style: none;
+}
+.cssSlider .slides > li {
+	width: 100%;
+	height: 70vmin;
+	position: absolute top;
+	z-index: 1;
+	overflow: hidden;
+}
+.cssSlider .slides > li > img {
+	min-height: 600px;
+	min-width: 900px;
+	max-height: 600px;
+	max-width: 900px;
+}
+.cssSlider .thumbnails {
+	display: block;
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+.cssSlider .thumbnails > li {
+	float: left;
+	width: 20%;
+}
+.cssSlider .thumbnails > li > a {
+	display: block;
+}
+.cssSlider .thumbnails > li > a > img {
+	min-height: 270px;
+	min-width: 270px;
+	max-height: 250px;
+	max-width: 250px;
+}
+
+.cssSlider .slides li:target {
+	z-index: 3;
+	-webkit-animation: slide 1s 1;
+}
+.cssSlider .slides li:not(:target) {
+	-webkit-animation: hidden 1s 1;
+}
+
+@-webkit-keyframes slide {
+	0% {
+		-webkit-transform: translateX(-100%);
+		        transform: translateX(-100%);
+	}
+	100% {
+		-webkit-transform: translateX(0%);
+		        transform: translateX(0%);
+	}
+}
+@keyframes slide {
+	0% {
+		-webkit-transform: translateX(-100%);
+		        transform: translateX(-100%);
+	}
+	100% {
+		-webkit-transform: translateX(0%);
+		        transform: translateX(0%);
+	}
+}
+@-webkit-keyframes hidden {
+	0% {
+		z-index: 2;
+		-webkit-transform: translateX(0%);
+		        transform: translateX(0%);
+	}
+	100% {
+		z-index: 2;
+		-webkit-transform: translateX(100%);
+		        transform: translateX(100%);
+	}
+}
+@keyframes hidden {
+	0% {
+		z-index: 2;
+		-webkit-transform: translateX(0%);
+		        transform: translateX(0%);
+	}
+	100% {
+		z-index: 2;
+		-webkit-transform: translateX(100%);
+		        transform: translateX(100%);
+	}
+}
+.img_footer{
+	max-width: auto;
+	max-height: 300px;
+}
+.footer-anim {
+	animation-name: slide-rotate-hor-top;
+	animation-duration: 8s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+}
+.test_flex {
+	display: flex;
+	justify-content: space-between;
+}
+.mark {
+   transition: 2.5s; /* Время эффекта */
+}
+.test_flex + .mark {
+	color: #345834;
+}
+.mark:hover {
+   transform: scale(1.2);
+   filter: invert(90%);
+   box-shadow: inset hoff voff blur #000;
+}
+.end_img {
+	position: absolute;
+	display: none;
+}
+.mark:hover .end_img {
+	display: inline;
+}
+
+@keyframes slide-rotate-hor-top{
+	0%{
+
+	}
+	50%
+	{
+		transform:translateX(100px) ;
+	}
+	75%{
+		transform: translateX(400px);
+	}
+	100%{
+		transform: translateX(1200px);
+	}
+}
+
+@media print { /* Стиль для печати */
+	BODY { font-family: Times, 'Times New Roman', serif; /* Шрифт с засечками */ }}
+@media screen { /* Стиль для отображения в браузере */
+	BODY { font-family: sans-serif}
+}
